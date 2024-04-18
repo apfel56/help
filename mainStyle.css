@@ -1,0 +1,901 @@
+﻿* {
+    box-sizing: border-box;
+
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background: url("../Images/backgroundImage.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+.header {
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+}
+
+.title {
+    position: relative;
+    float: left;
+    
+    
+    font-weight: 600;
+    font-size: 75px;
+    color: white;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.header-underline {
+    top: 0;
+
+    width: 100%;
+    background-color: white;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 25px;
+    font-family: "Barlow", sans-serif;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+   
+    transition: 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+   
+}
+
+.navbar a:hover {
+    color: khaki;
+    transition: 0.3s;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.box1 {
+    position: relative;
+    float: left;
+    width: 900px;
+    height: 600px;
+    padding: 10px;
+    margin: 50px;
+    font-family: "Share Tech", sans-serif;
+    /*border: 5px solid red;*/
+
+    font-size: 35px;
+    color: white;
+    opacity: 0;
+    animation: ani1 2s ease-out forwards;
+}
+
+
+
+
+@keyframes ani1 {
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.box1 img {
+    height: 500px;
+    width: auto;
+}
+
+
+.container.box2 {
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    margin: 150px;
+    margin-right: 10px;
+    border: 5px solid red;
+
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+
+.skyviewImage {
+    width: 500px;
+    height: auto;
+}
+
+.teamPicture {
+    width: 500px;
+    height: auto;
+}
+
+.box1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.box1 a:hover {
+    color: khaki;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+
+footer {
+    position: relative;
+
+    bottom: 0;
+    background: black;
+    color: white;
+    width: 100%;
+    height: 220px;
+    padding-top: 10px;
+   
+    clear: both;
+
+}
+
+footer h3 {
+    text-align: center;
+    font-size: 35px;
+
+}
+
+footer p {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/*XS */
+@media (min-width: 200px)and (max-width: 475px) {
+
+    .header {
+        max-width: 475px;
+    }
+
+    .header-underline {
+        width: 475px;
+        position: relative;
+        background-color: yellow;
+    }
+
+    .header {
+        /*position: fixed;*/
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        width: 80px;
+        height: auto;
+    }
+
+    .title {
+        position: relative;
+        float: left;
+        font-weight: 600;
+        font-size: 35px;
+        padding-left: 20px;
+        color: white;
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .navbar a {
+        display: inline-block;
+        position: relative;
+        font-size: 18px;
+        font-family: "Barlow", sans-serif;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-left: 90px;
+        padding-bottom: 12px;
+    }
+
+    .box1 {
+        float: left;
+        position: relative;
+        width: 400px;
+        height: 300px;
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+
+        .box1 img {
+            width: 340px;
+            height: auto;
+        }
+
+
+
+        .box1 p {
+            font-size: 20px;
+        }
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+        background: black;
+        color: khaki;
+        width: 475px;
+        height: 220px;
+        padding-top: 10px;
+        clear: both;
+    }
+
+        footer h3 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+}
+
+/*sm */
+@media (min-width: 476px) and (max-width: 640px) {
+
+
+    .header {
+        max-width: 640px;
+    }
+
+    .header-underline {
+        width: 640px;
+        position: relative;
+        background-color: red;
+    }
+
+    .header {
+        /*position: fixed;*/
+        top: 0;
+        left: 0;
+        width: 640px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .title {
+        position: relative;
+        float: left;
+        font-weight: 600;
+        font-size: 40px;
+        padding-left: 20px;
+        color: white;
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .navbar a {
+        
+        /*border: 1px solid red;*/
+        position: relative;
+        float: left;
+        display: inline-block;
+        font-size: 18px;
+        font-family: "Barlow", sans-serif;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+    }
+
+    .box1 {
+        float: left;
+        position: relative;
+        width: 500px;
+        height: 300px;
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+
+        .box1 img {
+            width: 460px;
+            height: auto;
+        }
+
+
+
+        .box1 p {
+            font-size: 23px;
+        }
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+        background: black;
+        color: khaki;
+        width: 640px;
+        height: 220px;
+        padding-top: 10px;
+        clear: both;
+    }
+
+        footer h3 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+
+
+
+
+}
+
+/*md */
+@media (min-width: 641px) and (max-width: 900px){
+    .header {
+        max-width: 900px;
+    }
+
+    html {
+        width: 900px;
+    }
+
+    .header-underline {
+        width: 900px;
+        position: relative;
+        background-color: orange;
+    }
+
+    .header {
+        /*position: fixed;*/
+        top: 0;
+        left: 0;
+        width: 900px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .title {
+        position: relative;
+        float: left;
+        font-weight: 600;
+        font-size: 40px;
+        padding-left: 20px;
+        color: white;
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .navbar a {
+        /*border: 1px solid red;*/
+        position: relative;
+        float: left;
+        display: inline-block;
+        font-size: 18px;
+        font-family: "Barlow", sans-serif;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+    }
+
+    .box1 {
+        float: left;
+        position: relative;
+        width: 390px;
+        height: 300px;
+        margin-left: 30px;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+
+        .box1 img {
+            width: 360px;
+            height: auto;
+        }
+
+
+
+        .box1 p {
+            font-size: 23px;
+        }
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+        background: black;
+        color: khaki;
+        width: 900px;
+        height: 420px;
+        padding-top: 10px;
+        clear: both;
+    }
+
+        footer h3 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 18px;
+        }
+}
+
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .header {
+        max-width: 1200px;
+    }
+
+    html {
+        width: 1200px;
+    }
+
+    .header-underline {
+        width: 1200px;
+        position: relative;
+        background-color: deeppink;
+    }
+
+    .header {
+        /*position: fixed;*/
+        top: 0;
+        left: 0;
+        width: 1200px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .title {
+        position: relative;
+        float: left;
+        font-weight: 600;
+        font-size: 40px;
+        padding-left: 20px;
+        color: white;
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .navbar a {
+        /*border: 1px solid red;*/
+        position: relative;
+        float: left;
+        display: inline-block;
+        font-size: 18px;
+        font-family: "Barlow", sans-serif;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+    }
+
+    .box1 {
+        float: left;
+        position: relative;
+        width: 490px;
+        height: 300px;
+        margin-left: 60px;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+
+        .box1 img {
+            width: 460px;
+            height: auto;
+        }
+
+
+
+        .box1 p {
+            font-size: 26px;
+        }
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+        background: black;
+        color: khaki;
+        width: 1200px;
+        height: 420px;
+        padding-top: 10px;
+        clear: both;
+    }
+
+        footer h3 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 18px;
+        }
+}
+
+
+/*M-DS*/
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .header {
+        max-width: 1400px;
+    }
+
+    html {
+        width: 1400px;
+    }
+
+    .header-underline {
+        width: 1400px;
+        position: relative;
+        background-color: deeppink;
+    }
+
+    .header {
+        /*position: fixed;*/
+        top: 0;
+        left: 0;
+        width: 1400px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        width: 160px;
+        height: auto;
+    }
+
+    .title {
+        position: relative;
+        float: left;
+        font-weight: 600;
+        font-size: 45px;
+        padding-left: 20px;
+        color: white;
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .navbar a {
+       /*border: 1px solid red;*/
+        position: relative;
+        float: left;
+        display: inline-block;
+        font-size: 18px;
+        font-family: "Barlow", sans-serif;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+    }
+
+    .box1 {
+        float: left;
+        position: relative;
+        width: 600px;
+        height: 500px;
+        margin-left: 60px;
+        margin-top: 110px;
+        margin-right: 10px;
+    }
+
+        .box1 img {
+            width: 540px;
+            height: auto;
+        }
+
+
+
+        .box1 p {
+            font-size: 26px;
+        }
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+        background: black;
+        color: khaki;
+        width: 1400px;
+        height: 420px;
+        padding-top: 10px;
+        clear: both;
+    }
+
+        footer h3 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 18px;
+        }
+}
+
+/*M-MS*/
+@media (min-width: 1401px) and (max-width: 1920px) {
+    .header {
+        max-width: 1920px;
+    }
+
+    html {
+        width: 1920px;
+    }
+
+    .header-underline {
+        width: 1920px;
+        position: relative;
+        background-color: lightseagreen;
+    }
+
+    .header {
+        /*position: fixed;*/
+        top: 0;
+        left: 0;
+        width: 1920px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        width: 200px;
+        height: auto;
+    }
+
+    .title {
+        position: relative;
+        float: left;
+        font-weight: 600;
+        font-size: 60px;
+        padding-left: 20px;
+        color: white;
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .navbar a {
+        /*border: 1px solid red;*/
+        position: relative;
+        float: left;
+        display: inline-block;
+        font-size: 30px;
+        font-family: "Barlow", sans-serif;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+    }
+
+    .box1 {
+        float: left;
+        position: relative;
+        width: 800px;
+        height: 700px;
+        margin-left: 60px;
+        margin-top: 150px;
+        margin-right: 10px;
+    }
+
+        .box1 img {
+            width: 740px;
+            height: auto;
+        }
+
+
+
+        .box1 p {
+            font-size: 35px;
+        }
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+        background: black;
+        color: khaki;
+        width: 1920px;
+        height: 220px;
+        padding-top: 10px;
+        clear: both;
+    }
+
+        footer h3 {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 22px;
+        }
+}
+
+
+/*L*/
+@media (min-width: 1921px) and (max-width: 2559px) {
+    .header {
+        max-width: 2559px;
+    }
+
+    html {
+        width: 2559px;
+    }
+
+    .header-underline {
+        width: 2559px;
+        position: relative;
+        background-color: silver;
+    }
+
+    .header {
+        /*position: fixed;*/
+        top: 0;
+        left: 0;
+        width: 2559px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        width: 230px;
+        height: auto;
+    }
+
+    .title {
+        position: relative;
+        float: left;
+        font-weight: 600;
+        font-size: 65px;
+        padding-left: 20px;
+        color: white;
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .navbar a {
+        /*border: 1px solid red;*/
+        position: relative;
+        float: left;
+        display: inline-block;
+        font-size: 30px;
+        font-family: "Barlow", sans-serif;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-left: 50px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+    }
+
+    .box1 {
+        float: left;
+        position: relative;
+        width: 900px;
+        height: 700px;
+        margin-left: 60px;
+        margin-top: 150px;
+        margin-right: 200px;
+    }
+
+        .box1 img {
+            width: 840px;
+            height: auto;
+        }
+
+
+
+        .box1 p {
+            font-size: 40px;
+        }
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+        background: black;
+        color: khaki;
+        width: 2559px;
+        height: 220px;
+        padding-top: 10px;
+        clear: both;
+    }
+
+        footer h3 {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        footer p {
+            text-align: center;
+            font-size: 22px;
+        }
+}

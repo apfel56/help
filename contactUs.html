@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="../Styles/contactUsStyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale =1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+
+
+        <img src="../Images/Mikcycle logo default.png" class="logo" />
+
+        <h1 class="title">Contact us</h1>
+
+        <nav class="navbar">
+            <a href="../WebPages/mainPage.html">Main Page</a>
+            <a href="../WebPages/aboutGame.html">About Game</a>
+
+            <a href="#">Contact Us</a>
+
+
+        </nav>
+
+
+
+    </header>
+    <hr class="header-underline" />
+
+
+    <div class="box1">
+        Do you have any questions? We're here to help!<br />
+        Feel free to reach out to us!
+
+    </div>
+
+    <div class="cool">
+        <img src="../Images/Screenshot (50)y.png" />
+    </div>
+
+
+    <div class="fieldInfo">
+
+        <form name="submit-to-google-sheet" id="form">
+
+
+            <div class="descr">
+                <label for="description">Describe your concern / suggestion </label>
+                <textarea id="description" name="description" required maxlength="1000"></textarea>
+            </div>
+
+            <br />
+
+
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required minlength="2" />
+
+            <br />
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required minlength="2" />
+
+            <br />
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" />
+
+            <br />
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="example@gmail.com" required>
+
+
+
+
+
+
+            <div class="buttons">
+
+                <button type="submit">SUBMIT</button>
+
+
+
+                <button type="reset">CLEAR</button>
+
+
+
+            </div>
+
+
+
+
+            <br />
+
+
+
+
+
+
+        </form>
+
+        <span id="msg">
+           
+        </span>
+    </div>
+
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+
+            <h3>Thanks for visiting us!</h3>
+            <p>Have a great day and see us later!</p>
+            <p>Built, designed and deployed by some Belarusian</p>
+
+
+
+        </div>
+
+
+
+    </footer>
+
+
+
+  
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwV7ExiwleRPijhBVy7VrH0S_kGdZHLPg6HZ5y34QMEZYzqzR9714UtIF-edseszFmeiA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message was sent"
+
+                    setTimeOut(function (){
+                        msg.innerHTML = ""
+                    },3000)
+
+                    document.getElementById("lname").reset()
+                    
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+
+
+
+
+</body>
+</html>
