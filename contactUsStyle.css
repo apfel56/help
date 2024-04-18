@@ -4,7 +4,7 @@
 
 body {
     min-height: 100vh;
-    background: url('../Images/Artboard 1.png') no-repeat;
+    background: url('Artboard 1.png') no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
